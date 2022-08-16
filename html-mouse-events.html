@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>JS Event example</title>
+    <style>
+            .container {
+                width: 100%;
+                height: 100%;
+                border: 1px solid black;
+
+            }
+        </style>
+    <script>
+            function onMouseEnter(component, event) {
+                console.log('onmouseenter', event);
+                document.querySelector('.container').style['background-color'] = 'red';
+            }
+
+            function onMouseLeave(component, event) {
+                console.log('onMouseLeave', event);
+                document.querySelector('.container').style['background-color'] = 'white';
+            }
+        </script>
+</head>
+<body>
+<div class="container">
+    <button
+            onmouseenter="onMouseEnter(this, event)"
+            onmouseleave="onMouseLeave(this, event)">
+        Test Mouse Event
+    </button>
+</div>
+</body>
+</html>

@@ -1,9 +1,7 @@
 package tr.com.atez.staj.db.service;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import tr.com.atez.staj.db.model.User;
 import tr.com.atez.staj.db.repository.UserRepository;
 
@@ -28,6 +26,11 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public User findUserByNameWithSalaryGreaterThan(String name, Double salary) {
 		return userRepository.findUserByNameWithSalaryGreaterThan(name, salary);
+	}
+
+	@Override
+	public User createUser(User user) {
+		return userRepository.save(user);
 	}
 
 }

@@ -47,4 +47,9 @@ public class JdbcUserService implements UserService {
 		return null;
 	}
 
+	@Override
+	public User createUser(User user) {
+		return null;
+	}
+
 }

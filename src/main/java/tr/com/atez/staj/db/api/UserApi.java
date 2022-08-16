@@ -31,4 +31,9 @@ public class UserApi {
 		return userService.findUserByNameWithSalaryGreaterThan(name, salary);
 	}
 
+	@PostMapping
+	public User createUser(@RequestBody User user) {
+		return userService.createUser(user);
+	}
+
 }

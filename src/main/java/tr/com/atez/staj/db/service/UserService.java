@@ -16,4 +16,6 @@ public interface UserService {
 	User findUserByName(String name);
 
 	User findUserByNameWithSalaryGreaterThan(String name, Double salary);
+
+	User createUser(User user);
 }
